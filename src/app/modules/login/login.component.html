@@ -1,0 +1,145 @@
+<div class="ct_login_main" [class.disabled]="isLoading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="ct_login_inner_bg">
+                    <div class="ct_login_left">
+                        <img
+                            src="assets/img/log_in_left_22.png"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div class="cti_login_right_56">
+                        <div class="pt-2">
+                            <div class="text-center pt-2 mb-4">
+                                <img
+                                    src="assets/img/Carbontek.png"
+                                    style="object-fit: contain"
+                                />
+                                <!-- <img src="assets/img/ekobon.png" style="object-fit: contain;" style="justify-items: center" /> -->
+                            </div>
+                            <h2 class="text-center ct_fw_600 ct_fs_35">
+                                Sign in your account
+                            </h2>
+                            <p class="text-center">
+                                Enter Your Credentials to Sign in your account
+                            </p>
+
+                            <form
+                                [formGroup]="loginForm"
+                                (ngSubmit)="loginByAuth()"
+                                class="mt-5"
+                            >
+                                <div class="form-group">
+                                    <div
+                                        class="input-field"
+                                        [class.error]="
+                                            loginForm.controls['email'].dirty &&
+                                            loginForm.hasError(
+                                                'required',
+                                                'email'
+                                            )
+                                        "
+                                    >
+                                        <label for="formGroupExampleInput"
+                                            >Email Or Username</label
+                                        >
+                                        <input
+                                            type="text"
+                                            formControlName="email"
+                                            class="form-control text-white ct_input"
+                                            style="
+                                                background-color: transparent;
+                                            "
+                                            placeholder="Enter your registered email or username"
+                                        />
+                                    </div>
+                                </div>
+                                <p
+                                    class="text-danger mt-0"
+                                    *ngIf="
+                                        submitted &&
+                                        loginForm.controls.email.invalid
+                                    "
+                                >
+                                    Email is required
+                                </p>
+
+                                <div class="form-group">
+                                    <div class="input-field">
+                                        <label for="formGroupExampleInput2"
+                                            >Password</label
+                                        >
+                                        <div class="position-relative">
+                                            <input
+                                                type="text"
+                                                autocomplete="off"
+                                                formControlName="password"
+                                                type="password"
+                                                class="form-control text-white ct_input"
+                                                style="
+                                                    background-color: transparent;
+                                                "
+                                                placeholder="Enter your password"
+                                            />
+                                            <i
+                                                class="fa-regular fa-eye-slash ct_eye_show"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p
+                                    *ngIf="
+                                        submitted &&
+                                        loginForm.controls.password.invalid
+                                    "
+                                    class="text-danger pt-0"
+                                >
+                                    Password is required
+                                </p>
+
+                                <div class="form-group">
+                                    <div class="input-field">
+                                        <!-- <ngx-recaptcha2 #captchaElem width="100%" [siteKey]="
+                                     '6LeRTbwlAAAAAGEVe4yfdUYWzXarB5YwQ3NaIa07'
+                                    " (reset)="handleReset()" (expire)="handleExpire()" (load)="handleLoad()"
+                                    (resolved)="handleSuccess($event)" [size]="size" [hl]="lang" [theme]="theme"
+                                    [type]="type" formControlName="recaptcha"></ngx-recaptcha2> -->
+                                        <!-- <ngx-recaptcha2 #captchaElem width="100%"
+                                    [siteKey]="'6Le2vx0pAAAAAC-SCjOLEXtd5NWVtMpZaBs7Koed'" (reset)="handleReset()"
+                                    (expire)="handleExpire()" (load)="handleLoad()" (resolved)="handleSuccess($event)"
+                                    [size]="size" [hl]="lang" [theme]="theme" [type]="type"
+                                    formControlName="recaptcha"></ngx-recaptcha2> -->
+                                    </div>
+                                </div>
+                                <!-- <p *ngIf="submitted && loginForm.controls.recaptcha.invalid" class="text-danger">Please complete
+                            the Captcha</p> -->
+
+                                <div class="text-right">
+                                    <a
+                                        href="javascript:void(0)"
+                                        class="text-right"
+                                        routerLink="/forgot-password"
+                                        >Forgot your password?</a
+                                    >
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <button
+                                        class="ct_login_btn text-center mx-auto"
+                                        type="submit"
+                                    >
+                                        <span
+                                            class="fa fa-spinner fa-spin"
+                                            *ngIf="showLoader"
+                                        ></span>
+                                        Login
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

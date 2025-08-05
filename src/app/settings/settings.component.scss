@@ -1,0 +1,116 @@
+// .ct_remove_side_bar_10{
+//     width: calc(100% - 0px) !important;
+//     margin-left: 0px !important;
+// }
+
+// .ct_remove_side_bar_10 ~ .content-wrapper {
+//     margin-left: 0px !important;
+// }
+
+// .ct_setting_menu_links ul {
+//     list-style: none;
+//     display: flex;
+//     align-items: center;
+//     gap: 30px;
+//     margin-bottom: 0px;
+// }
+
+// .ct_setting_menu_links ul li a{
+//     color: #000;
+//     font-weight: 500;
+// }
+// .ct_setting_box_bg_12 {
+//     background-color: #fff;
+//     padding: 30px;
+//     border-radius: 10px;
+//     margin-top: 30px;
+// }
+// .ct_setting_box_bg_12 h2{
+//     font-size: 24px;
+//     font-weight: 700;
+//     margin-bottom: 15px;
+// }
+
+// .ct_setting_card_box_23{
+//     background-color: #f5f5f5;
+//     padding: 30px;
+//     text-align: center;
+//     border-radius: 10px;
+//     cursor: pointer;
+// }
+
+// .ct_setting_card_box_23 i {
+//     width: 60px;
+//     height: 60px;
+//     background-color: #d3dfcd;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: auto;
+//     margin-bottom: 20px;
+//     border-radius: 100px;
+//     color: #fff;
+//     font-size: 22px;
+// }
+
+// button{
+//     border-radius: 5px;
+//     border-color: transparent;
+//     background-color: rgb(25 174 233);
+//     margin-top: 30px;
+//     color: white;
+//     height: 35px;
+//     margin-left: 25px;
+//     }
+
+
+.ct_menu_card {
+    background-color:rgb(227, 245, 252);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    // border: 1px solid #48beed;
+    height: 100%;
+        border: 1px solid transparent;
+        transition: 0.4s ease all ;
+        cursor: pointer;
+}
+
+.ct_menu_card:hover{
+    border: 1px solid #48beed;
+}
+.ct_menu_card_icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color:#48beed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    margin-bottom: 15px;
+}
+.ct_menu_card_icon img{
+    filter: invert(1);
+}
+
+.ct_grid_5{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    gap: 15px;
+}
+
+.ct_fs_16{
+    font-size: 16px;
+}
+
+app-header.ct_remove_side_bar_10.main-header.navbar.navbar-expand.navbar-light {
+    margin-left: 0px;
+    width: 100%;
+}
+@media screen and (max-width:1199px){
+    .ct_grid_5{
+        grid-template-columns: repeat(3,1fr);
+    }
+}

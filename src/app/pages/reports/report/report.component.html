@@ -1,0 +1,28 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div
+            class="col-sm-6"
+            [ngClass]="
+                this.updatedtheme === 'dark' ? 'headlinetextD' : 'headlinetextL'
+            "
+        >
+            <h3 class="m-0 pl-2">Reports</h3>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div
+            class="col-lg-4 col-md-6 mb-4"  *ngFor="let report of reports">
+           <div   [ngClass]="
+                this.updatedtheme === 'dark' ? 'reportsclassD' : 'reportsclassL'
+            "
+           >
+            <div>
+                 <h4 class="ct_fs_20">{{ report.heading }}</h4>
+            <p>{{ report.pera }}</p>
+            </div>
+            <button class="ct_blue_btn ct_animation_btn_121 mt-auto" [routerLink]="report.route">{{ report.button }}</button>
+           </div>
+        </div>
+    </div>
+</div>
